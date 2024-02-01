@@ -1,0 +1,11 @@
+NORMALIZATION|SUBQUERIES
+
+Why? removal of redundancy
+1nf-atomic values
+
+2nf-each row must have unique values and its not necessary to have primary key
+-you must find a candidate key
+and seperate cols(non key attributes) based on dependency to the key. and every table newly formed must have primary key and a foreign key relating everyone OR make a new table relationship with all the pks
+
+3nf-avoid transitive dependencies
+

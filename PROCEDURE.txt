@@ -1,0 +1,76 @@
+PROCEDURE
+What?-block of code with a name given stored in the database
+Purpose?-it compiles 
+	things that just queries cannot do
+
+SYNTAX
+1)postgre
+
+create or replace procedure pro_name(para_name dtype,...)
+language plpgsql
+as $$
+declare
+	variables
+begin
+	proc_body-all logics
+end;
+$$
+
+EXECUTION- call proc_name();
+PRINT-raise notice
+
+
+$$- it will accept all special meaning elements without need of escape sequencces
+or replace-just in case it already exists it will overwrite
+
+2)Oracle
+
+
+create or replace procedure pro_name(para_name dtype,...)
+as
+	variables
+begin
+	proc_body-all logics
+end;
+
+
+EXECUTION- exec proc_name;
+PRINT-dbms_output.put_line
+
+3)microsoft sql
+
+create or alter procedure pro_name(@para_name dtype,@...)
+as 
+declare	@variable_name dtype
+	@v_name dtype;
+begin
+	proc_body-all logics
+end;
+
+
+EXECUTION- exec proc_name;
+PRINT-print('')
+
+
+
+
+4)mySQl
+
+DELIMITER $$
+create or replace procedure pro_name(para_name dtype,...)
+as 
+declare
+	variable dtype;
+begin
+	proc_body-all logics
+end $$
+
+
+delimiter is declared because there are many queries with semicolons, so it will assume whole thing has ended hence we need to redeclare it o someting else
+
+you cannot change the body of the proc again, youll have to drop and create it again.
+
+EXECUTION- exec proc_name;
+PRINT-select
+
+

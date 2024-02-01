@@ -1,0 +1,13 @@
+DOT NET DAY-1
+DAY1
+SQL SERVER
+
+AZURE| AWS| G CLOUD
+
+Db prg-set of instr in logical order
+olap-analysis snowflake,star 
+oltp-transaction
+
+
+independence integrity security efficiency
+
